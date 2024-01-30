@@ -1,12 +1,13 @@
-### Health Management APP
-from dotenv import load_dotenv
-
-load_dotenv() ## load all the environment variables
-
 import streamlit as st
 import os
 import google.generativeai as genai
 from PIL import Image
+
+from dotenv import load_dotenv
+
+load_dotenv() ## load all the environment variables
+
+
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -35,9 +36,9 @@ def input_image_setup(uploaded_file):
     
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Health Advisor App")
+st.set_page_config(page_title="Best Telehealth App")
 
-st.header("Health Advisor App")
+st.header("Best Telehealth App")
 # input=st.text_input("Input Prompt: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 image=""   
